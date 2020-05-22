@@ -9,6 +9,7 @@
     </head>
     <body>
     <!-- "Controller" code built into JSP!!! with Scriptlets	 -->
+    <!-- get data from input ==> request.getParameter("InputName") -->
     <%  
 		String fN = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
