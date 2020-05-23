@@ -8,14 +8,14 @@
 </head>
 <body>
 calc page
-	<form action="calcServlet" method="Post">
+	<!-- <form action="calcServlet" method="Post">
 		<input type="text" name="add1" size="2" value="" />+
 		<input
 			type="text" name="add2" value="" size="2" />=<input type="text"
 			name="sum" value="" size="2" readonly /><br /> <input type="text"
 			name="mult1" value="" size="2" />* <input type="text" name="mult2"
 			value="" size="2" />=<input type="text" name="product" value=""
-			size="2" readonly /><br /> <input type="submit" value="Submit" />
+			size="2" readonly /><br /> <input type="submit" value="Submit" /> -->
 
 	</form> 
 </body>

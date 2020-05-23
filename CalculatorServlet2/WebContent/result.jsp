@@ -8,14 +8,19 @@
 </head>
 <body>
 result page
- 	<form action='calcServlet' method='POST'>
-		<input type = 'text' size = '2' name = 'add1' value = "${requestScope.add1}" />+
-		<input type = 'text' size = '2' name = 'add2' value = "${add2}" />
-		<input type = 'text' size = '4' name = 'sum' value = "${sum.sum}" readonly  /> <br/>
-		<input type = 'text' size = '2' name = 'mult1' value = "${mult1}" />*
-		<input type = 'text' size = '2' name = 'mult2' value = "${mult2}"  />=
-		<input type = 'text' size = '4' name = 'product' value = "${product.product}" readonly  /><br/>
-		<input type = 'submit' value = 'Submit'/>
-	</form>	
+	<form action="showClaculator" method="post">
+    <fieldset>
+        <legend>add your number</legend>
+                <input type = 'text' size = '2' name = 'add1' value="${form.num1}">+
+                <input type = 'text' size = '2' name = 'add1' value="${form.num2}">=
+                <input type = 'text' size = '4' name = 'sum' value="${form.sum}" readonly>
+                <input type = 'text' size = '2' name = 'mult1' value="${form.mult1}">*
+                <input type = 'text' size = '2' name = 'mult2' value="${form.mult2}">=
+                <input type = 'text' size = '4' name = 'product' value="${form.product}" readonly>
+            <p id="buttons">
+                <input id="submit" type="submit" value="Submit">
+            </p>
+    </fieldset>
+    </form>
 </body>
 </html>
