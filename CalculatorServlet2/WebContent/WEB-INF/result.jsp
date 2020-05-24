@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- action should be name of servlet ==> not specify method type ==> default is GET -->
  	<form action='calc2' method='POST'>
 		<input type = 'text' size = '2' name = 'add1' value = "${requestScope.add1}" />
 		<input type = 'text' size = '2' name = 'add2' value = "${add2}" />
