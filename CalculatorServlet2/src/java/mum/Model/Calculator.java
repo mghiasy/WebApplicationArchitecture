@@ -1,30 +1,20 @@
-package mum.Model;
+package mum.model;
 
 public class Calculator {
-	private Float num1;
-	private Float num2;
-	private Float mult2;
-	private Float mult1;
-	private Float sum;
-	private Float product;
+	private int num1;
+	private int num2;
 	
-	public Calculator(Float num1, Float num2,Float mult1,Float mult2) {
+	public Calculator(int num1, int num2) {
 		this.num1 = num1;
 		this.num2 = num2;
-		this.mult1=mult1;
-		this.mult2=mult2;
 	}
 	
-	public void calculate() {
-		Float s= num1+num2;
-		Float p= mult1*mult2;
-		setSum(s);
-		setProduct(p);
+	public int getSum() {
+		return num1+num2;
 	}
-	public void setSum(Float sum) {
-		this.sum=sum;
+	
+	public int getProduct() {
+		return num1*num2;
 	}
-	public void setProduct(Float product) {
-		this.product=product;
-	}
+
 }
