@@ -6,11 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08682aea-e912-430f-a524-5ef34276af8c" name="Default Changelist" comment="" />
+    <list default="true" id="08682aea-e912-430f-a524-5ef34276af8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../CalculatorProject/MVCCalculator/build/classes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1_Starbucks_Model1/build/classes/.gitignore" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -20,6 +26,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1c9Im9Fi5qmgrPT0oYDCW53pbyI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -181,11 +188,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -208,6 +210,7 @@
       <workItem from="1589938111743" duration="685000" />
       <workItem from="1589940509558" duration="375000" />
       <workItem from="1589946755260" duration="1148000" />
+      <workItem from="1590730229609" duration="13000" />
     </task>
     <servers />
   </component>
