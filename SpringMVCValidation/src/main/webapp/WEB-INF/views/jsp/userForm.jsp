@@ -9,45 +9,47 @@
 	 <!-- no need to action be cause both get & post has the same url --> 
 	 <form:form modelAttribute="newUser" > 
 	 <fieldset>
+	 <form:errors path = "*"/> <!-- to show all the errors here -->
 		<!-- type is text by default => no need to be added -->
 		<!-- access with ModelAttr Items by name in qute for Model Items by dollar sign-->
 		<p>
 			User name :
-			<form:input path="name" />
+			<!-- to add the errors related to field name beside it to show the errors related to name-->
+			<form:input path="name" /> <form:errors path="name" />
 		</p>
 		<p>
 			Email :
-			<form:input path="email" />
+			<form:input path="email" /> <form:errors path="email" />
 		</p>
 		<p>
 			Birthday:
-			<form:input path="birthday" />
+			<form:input path="birthday" /> <form:errors path="birthday" />
 		</p>
 		<p>
 			Age :
-			<form:input path="age" />
+			<form:input path="age" /> <form:errors path="age" />
 		</p>
 		<p>
 			Role :
-			<form:select path="role">
+			<form:select path="role"> 
 				<!--  default option should not have any value-->
 				<form:option value="">select role</form:option>
 				<form:options items="${roles}" />
-			</form:select>
+			</form:select> <form:errors path="role" /> <!-- should be after select -->
 		</p>
 		<p>Address information :</p>
 		<!-- address field in User is by the name of Addr -->
 		<p>
 			Street :
-			<form:input path="addr.street" />
+			<form:input path="addr.street" /> <form:errors path="addr.street" />
 		</p>
 		<p>
 			State :
-			<form:input path="addr.state" />
+			<form:input path="addr.state" /> <form:errors path="addr.state" />
 		</p>
 		<p>
 			zip code :
-			<form:input path="addr.zipcode" />
+			<form:input path="addr.zipcode" /> <form:errors path="addr.zipcode" />
 		</p>
 
 		<!--it is better to set value because different browser have different name for submit btn  -->
