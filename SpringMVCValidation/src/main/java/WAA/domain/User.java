@@ -13,7 +13,7 @@ public class User {
 	
 	//use NotBlank or NotEmpty for String
 	@NotBlank(message="email must have a value")
-	@Email(message = "Email must follow the formatter ***@***")
+	@Email(message = "{asb}")
 	private String email;
 	
 
