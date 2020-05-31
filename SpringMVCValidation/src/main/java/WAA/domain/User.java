@@ -1,6 +1,7 @@
 package WAA.domain;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -25,9 +26,10 @@ public class User {
 	
 	//better to use localDate instead of Date; coz Date is old and is not immutable
 	//for change from string to Date time => otherwise will raise error in submit page
-	@DateTimeFormat(pattern="mm-DD-yyyy")
+	@DateTimeFormat(pattern="mm-DD-yyyy") // Does not work for LocalDate => loCalDate returns just Date not time , DateTimeFormatter returns both
 	@NotNull(message ="birthday is a required field")
-	private LocalDate birthday;
+	//private LocalDate birthday;
+	private Date birthday;
 	
 	@NotBlank(message="role must have a value")
 	private String role;
@@ -52,10 +54,10 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	public LocalDate getBirthday() {
+	public Date getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(LocalDate birthday) {
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 	public String getRole() {
