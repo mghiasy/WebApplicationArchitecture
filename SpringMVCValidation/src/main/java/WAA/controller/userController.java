@@ -37,6 +37,7 @@ public class userController {
 		
 		redirectAttrs.addFlashAttribute("savedUser",user);
 		//redirect to another url
+		// /user should remain here in redirect => we need to redirect to /user/userDetails
 		return "redirect:/userDetails";
 	}
 
