@@ -2,20 +2,37 @@ package WAA.domain;
 
 import java.time.LocalDate;
 
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
+	@Size(min=2,max=30, message="Size of the name must be between 2 and 30")
 	private String name;
-	private String email;
-	private Integer age;
-	//better to use localDate instead of Date;
-	//Date is old and is not immutable
-	//private Date birthday;
 	
-	//for change from spring to Date time => otherwise will raise error in submit page
+	//use NotBlank or NotEmpty for String
+	@NotBlank(message="email must have a value")
+	@Email(message = "Email must follow the formatter ***@***")
+	private String email;
+	
+
+	//Min is used for int and show the min value
+	@Min(value = 18, message ="Age must be greater than ot equal to 18")
+	@NotNull(message ="Age is a required field")
+	//for age which is Int we can use NotNull
+	private Integer age;
+	
+	
+	//better to use localDate instead of Date; coz Date is old and is not immutable
+	//for change from string to Date time => otherwise will raise error in submit page
 	@DateTimeFormat(pattern="mm-DD-yyyy")
+	@NotNull(message ="birthday is a required field")
 	private LocalDate birthday;
+	
+	@NotBlank(message="role must have a value")
 	private String role;
+	
+	@Valid
 	private Address addr;
 	public String getName() {
 		return name;

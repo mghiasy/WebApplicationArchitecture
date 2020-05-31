@@ -22,6 +22,14 @@
 
   
   <dependencies>
+  <!-- for add bean validation -->
+  <!-- to find the latest version go to "hibernate validator maven dependency" and find the latest one 
+  and you can copy the whole code for different builder-->
+  <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.0.14.Final</version>
+</dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-webmvc</artifactId>
