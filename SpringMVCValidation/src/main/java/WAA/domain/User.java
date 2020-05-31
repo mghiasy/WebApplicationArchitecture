@@ -2,6 +2,8 @@ package WAA.domain;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class User {
 	private String name;
 	private String email;
@@ -9,6 +11,9 @@ public class User {
 	//better to use localDate instead of Date;
 	//Date is old and is not immutable
 	//private Date birthday;
+	
+	//for change from spring to Date time => otherwise will raise error in submit page
+	@DateTimeFormat(pattern="mm-DD-yyyy")
 	private LocalDate birthday;
 	private String role;
 	private Address addr;

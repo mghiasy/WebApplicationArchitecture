@@ -7,7 +7,7 @@
 <body>
 	 <h1>Add a new user2</h1>
 	 <!-- no need to action be cause both get & post has the same url --> 
-	 <form:form modelAttribute="newUser" action="saveUserForm"> 
+	 <form:form modelAttribute="newUser" > 
 	 <fieldset>
 		<!-- type is text by default => no need to be added -->
 		<!-- access with ModelAttr Items by name in qute for Model Items by dollar sign-->

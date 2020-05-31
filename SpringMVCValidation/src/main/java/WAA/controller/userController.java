@@ -8,12 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import WAA.domain.User;
 
 @Controller
 public class userController {
-	@RequestMapping(value= {"/","/user/add"} ,method = RequestMethod.GET)
+	@RequestMapping(value= {"/user/add"} ,method = RequestMethod.GET)
 	//ModelAttr for 
 	public String getUserForm(@ModelAttribute("newUser") User user,Model model) {
 		//for select role
@@ -27,9 +28,20 @@ public class userController {
 		
 	}
 	@RequestMapping(value="/user/add", method=RequestMethod.POST)
-	public String saveUser(Model model) {
+	//modelAttr is not required
+	public String saveUser(@ModelAttribute("newUser") User user,RedirectAttributes redirectAttrs) {
 		//save to DB
-		return "";
+		
+		//when we redirect data of user is no longer available:
+		
+		redirectAttrs.addFlashAttribute("savedUser",user);
+		//redirect to another url
+		return "redirect:/user/userDetails";
 	}
 
+	@RequestMapping(value="/user/userDetails")
+	public String success() {
+		//access to data in form through "savedUser" flush attr
+		return "success";
+	}
 }
