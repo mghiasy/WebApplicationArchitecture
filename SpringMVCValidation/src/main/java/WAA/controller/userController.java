@@ -13,8 +13,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import WAA.domain.User;
 
 @Controller
+@RequestMapping(value="/user")
 public class userController {
-	@RequestMapping(value= {"/user/add"} ,method = RequestMethod.GET)
+	@RequestMapping(value= {"/add"} ,method = RequestMethod.GET)
 	//ModelAttr for 
 	public String getUserForm(@ModelAttribute("newUser") User user,Model model) {
 		//for select role
@@ -27,7 +28,7 @@ public class userController {
 		return "userForm";
 		
 	}
-	@RequestMapping(value="/user/add", method=RequestMethod.POST)
+	@RequestMapping(value="/add", method=RequestMethod.POST)
 	//modelAttr is not required
 	public String saveUser(@ModelAttribute("newUser") User user,RedirectAttributes redirectAttrs) {
 		//save to DB
@@ -39,7 +40,7 @@ public class userController {
 		return "redirect:/user/userDetails";
 	}
 
-	@RequestMapping(value="/user/userDetails")
+	@RequestMapping(value="/userDetails")
 	public String success() {
 		//access to data in form through "savedUser" flush attr
 		return "success";
