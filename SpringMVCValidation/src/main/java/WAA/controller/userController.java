@@ -21,13 +21,11 @@ public class userController {
 	@RequestMapping(value= {"/add"} ,method = RequestMethod.GET)
 	//ModelAttr for 
 	public String getUserForm(@ModelAttribute("newUser") User user,Model model) {
-		//for select role
-		Map<String,String> roleMap = new HashMap<String,String>();
-		roleMap.put("Admin", "Admin");
-		roleMap.put("DBA", "DBA");
-		//wee need to add role to request scope
-		//role is a field in User Domain
-		model.addAttribute("roles",roleMap);
+//		//for select role//role is a field in User Domain
+//		Map<String,String> roleMap = new HashMap<String,String>();
+//		roleMap.put("Admin", "Admin");
+//		roleMap.put("DBA", "DBA");
+//		model.addAttribute("roles",roleMap);
 		return "userForm";
 		
 	}
@@ -43,7 +41,8 @@ public class userController {
 		
 		//So BindingResult must be immediately after ModelAttribute
 		if(result.hasErrors()) {
-			//to show error and be editted
+			//to show error and be edited
+			//we it goes back to form does not have roles again => it is filled inside method
 			return "userForm";
 		}
 		
@@ -62,5 +61,14 @@ public class userController {
 	public String success() {
 		//access to data in form through "savedUser" flush attr
 		return "success";
+	}
+	
+	
+	@ModelAttribute("roles")
+	public Map<String,String> publishRoles(){
+		Map<String,String> roleMap = new HashMap<String,String>();
+		roleMap.put("Admin", "Admin");
+		roleMap.put("DBA", "DBA");
+		return roleMap;
 	}
 }
