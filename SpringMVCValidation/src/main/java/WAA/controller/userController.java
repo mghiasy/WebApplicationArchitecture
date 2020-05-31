@@ -37,7 +37,7 @@ public class userController {
 		
 		redirectAttrs.addFlashAttribute("savedUser",user);
 		//redirect to another url
-		return "redirect:/user/userDetails";
+		return "redirect:/userDetails";
 	}
 
 	@RequestMapping(value="/userDetails")
