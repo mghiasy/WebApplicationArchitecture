@@ -1,8 +1,6 @@
 package WAA.domain;
 
-import java.time.LocalDate;
 import java.util.Date;
-
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -13,7 +11,7 @@ public class User {
 	
 	//use NotBlank or NotEmpty for String
 	@NotBlank(message="email must have a value")
-	@Email(message = "{asb}")
+	@Email(message = "{ValidEmailFormat}") //use {} for external msg
 	private String email;
 	
 

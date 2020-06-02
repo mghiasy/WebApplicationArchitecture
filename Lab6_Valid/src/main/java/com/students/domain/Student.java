@@ -32,6 +32,7 @@ public class Student {
  	@DateTimeFormat(pattern="MM/dd/yyyy")
     private Date birthday;
  
+ 	@Valid
 	private Phone phone;
 
   	public Integer getId() {

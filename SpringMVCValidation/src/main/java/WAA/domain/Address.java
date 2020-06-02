@@ -9,7 +9,7 @@ public class Address {
 	@NotBlank(message ="{street}")
 	private String street;
 	
-	@Size(min=2, max=2, message ="Size of State must be 2")
+	@Size(min=2, max=2, message ="{ValidSizeState}")
 	private String state;
 	
 	@NotNull(message = "zipCode must have a value")
