@@ -3,15 +3,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib  uri="http://www.springframework.org/tags" prefix="spring" %>
 <!DOCTYPE HTML>
-<html>
+<html dir="rtl" >
 <head>
 <title><spring:message code ="employeeForm.title" text ="Add Employee Form"/> </title>
-<style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
+<style type="text/css">@import url("<c:url value="/css/main.css"/>");
+/* label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+} */​</style>
 </head>
 <body>
 <p><a href="?language=en_US">English</a> | <a href="?language=fa_FA">فارسی</a></p>
 <div id="global">
-<form:form modelAttribute="employee" action="employee_save" method="post">
+<form:form modelAttribute="employee" action="employee_save" method="post" dir="rtl">
     <fieldset>
         <legend><spring:message code ="employeeForm.title" text ="title"/> </legend>
   		<p>
@@ -74,7 +79,7 @@
  			</div>
        </p>
         <p id="buttons">
-            <input id="submit" type="submit"  value="Add Employee">
+            <input id="submit" type="submit"  value="<spring:message code= "employeeForm.addEmployee" text ="addEmployee"/>"/>
         </p>
     </fieldset>
 </form:form>
