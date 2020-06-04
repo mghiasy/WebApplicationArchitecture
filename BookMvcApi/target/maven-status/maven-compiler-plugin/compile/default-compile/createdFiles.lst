@@ -1,0 +1,5 @@
+com/spring/config/MyWebAppInitializer.class
+com/spring/config/AppConfig.class
+com/spring/controller/HomeController.class
+com/spring/model/Book.class
+com/spring/config/MvcConfiguration.class
